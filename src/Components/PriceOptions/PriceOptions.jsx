@@ -23,14 +23,14 @@ const PriceOptions = () => {
          "name": "FitArea",
          "location": "46 Oak Avenue, Townsville, CANADA",
          "price": 400,
-         "features": ["Basic Membership","per WEEK"]
+         "features": ["Basic Membership","per WEEK","per day"]
        },
         {
          "id": "gym56",
          "name": "FitlIFE",
          "location": "356 Oak Avenue, Townsville, fINLAND",
          "price": 240,
-         "features": ["Basic Membership","per Year"]
+         "features": ["Basic Membership","per Year","primary Membership"]
        },
         {
          "id": "gym457",
@@ -44,11 +44,13 @@ const PriceOptions = () => {
      
 
   return (
-    <div>
-        <h2 className="text-5xl">Best Prices</h2>
-        {
+    <div className='m-10'>
+        <h2 className="text-5xl mb-5">Best Prices in the town</h2>
+        <div className='grid md:grid-cols-3 gap-5'>
+          {
             priceOptions.map((option) => <SinglePrice key={option.id} option = {option}></SinglePrice>)
-        }
+          }
+        </div>
        
     </div>
   )
